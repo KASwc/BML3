@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <title>0917→Gudetama</title>
+    </head>
+    <body>
+            身高：<input type="text" id="height"><br>
+            體重：<input type="text" id="weight"><br>
+            BMI:<span id="bmi"></span><br>
+    
+            <button type="button" onclick="count()">Count</button>
+        <script>
+            
+        function count() {
+        var h=document.getElementById("height").value;
+        h=parseFloat(h)/100
+
+        var w=document.getElementById("weight").value;
+        w=parseFloat(w)
+
+        var bmi=w/(h*h);
+        
+        document.write("您的BMI值為 " + Math.round(bmi) + "<br>");
+
+        if(bmi<25)
+       document.write("Too Light");
+       else if(25<bmi && bmi<30)
+       document.write("Health");
+       else
+       document.write("Too Heavy");
+       }
+        </script>
+    </body>
+</html>
